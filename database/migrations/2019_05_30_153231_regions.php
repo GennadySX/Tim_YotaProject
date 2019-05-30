@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Specialty extends Migration
+class Regions extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,6 @@ class Specialty extends Migration
     public function up()
     {
         //
-        Schema::create('specialty', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('rating');
-            $table->integer('id_parent');
-        });
     }
 
     /**
@@ -29,6 +23,6 @@ class Specialty extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specialty');
+        //
     }
 }

@@ -22,9 +22,22 @@ class DatabaseSeeder extends Seeder
         $owner->save();
         //------------------------------------------
         $admin = new Role();
+        $admin->name         = 'director';
+        $admin->display_name = 'Главный Директор';
+        $admin->description  = 'Вице Президент';
+        $admin->save();
+        //------------------------------------------
+
+        $admin = new Role();
         $admin->name         = 'admin';
         $admin->display_name = 'Администратор'; 
         $admin->description  = 'Управляющий'; 
+        $admin->save();
+        //------------------------------------------
+        $admin = new Role();
+        $admin->name         = 'directorShop';
+        $admin->display_name = 'Секретар';
+        $admin->description  = 'Менедджер по управления материалов';
         $admin->save();
         //------------------------------------------
         $admin = new Role();
@@ -34,28 +47,35 @@ class DatabaseSeeder extends Seeder
         $admin->save();
         //------------------------------------------
         $admin = new Role();
-        $admin->name         = 'expert';
-        $admin->display_name = 'Эксперт';
-        $admin->description  = 'Судья который оценивает'; 
+        $admin->name         = 'manager';
+        $admin->display_name = 'Манеджер';
+        $admin->description  = 'Менеджер компании';
         $admin->save();
         //------------------------------------------
         $admin = new Role();
-        $admin->name         = 'teacher';
-        $admin->display_name = 'Преподаватель'; 
+        $admin->name         = 'operator';
+        $admin->display_name = 'Оператор ';
+        $admin->description  = 'Call-Center сервис';
+        $admin->save();
+        //------------------------------------------
+        $admin = new Role();
+        $admin->name         = 'master';
+        $admin->display_name = 'Мастер';
+        $admin->description  = 'Починит ободувание';
+        $admin->save();
+        //------------------------------------------
+        $admin = new Role();
+        $admin->name         = 'seller';
+        $admin->display_name = 'Продавец ';
         $admin->description  = 'Обучает студентов'; 
         $admin->save();
         //------------------------------------------
         $admin = new Role();
-        $admin->name         = 'student';
-        $admin->display_name = 'Студент';
-        $admin->description  = 'Обучаеющий в ВУЗ'; 
+        $admin->name         = 'abonent';
+        $admin->display_name = 'Абонент';
+        $admin->description  = 'Потрибитель услуг комнапии или клиент';
         $admin->save();
-        //------------------------------------------
-        $admin = new Role();
-        $admin->name         = 'alien';
-        $admin->display_name = 'никто'; 
-        $admin->description  = 'ГомоСапиенс'; 
-        $admin->save();
+
     }
      public function run()
     {

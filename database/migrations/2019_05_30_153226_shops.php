@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class University extends Migration
+class Shops extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,7 @@ class University extends Migration
      */
     public function up()
     {
-        Schema::create('university', function (Blueprint $table){
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('rating');
-            $table->integer('id_parent');
-
-        });
+        //
     }
 
     /**
@@ -29,7 +23,6 @@ class University extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('university');
         //
     }
 }

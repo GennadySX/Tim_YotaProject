@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Faculty extends Migration
+class Employees extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,7 @@ class Faculty extends Migration
      */
     public function up()
     {
-        Schema::create('faculty', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->integer('rating');
-            $table->integer('id_parent');
-        });
+        //
     }
 
     /**
@@ -28,6 +23,6 @@ class Faculty extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('facutly');
+        //
     }
 }

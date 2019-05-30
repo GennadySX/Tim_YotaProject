@@ -1,5 +1,5 @@
-@include('home.header')
-@include('home.main')
+@include('main.header')
+@include('main.main')
 @yield('head')
 @yield('main')
 @yield('footer')
