@@ -13,7 +13,18 @@ class Tariff extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('tariff', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();
+            $table->string('cost');
+            $table->string('desc');
+            $table->date('from_public');
+            $table->date('to_public');
+            $table->timestamps();
+        });
+
+
+
     }
 
     /**
@@ -23,6 +34,6 @@ class Tariff extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('tariff');
     }
 }

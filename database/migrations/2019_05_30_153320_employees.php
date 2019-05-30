@@ -13,7 +13,18 @@ class Employees extends Migration
      */
     public function up()
     {
-        //
+
+        // Create table for storing roles
+        Schema::create('employees', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->integer('role');
+            $table->integer('region_id');
+            $table->timestamps();
+        });
+
+
+
     }
 
     /**
@@ -23,6 +34,6 @@ class Employees extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('employees');
     }
 }

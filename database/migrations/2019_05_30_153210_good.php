@@ -13,7 +13,20 @@ class Good extends Migration
      */
     public function up()
     {
-        //
+
+
+        Schema::create('stock', function (Blueprint $table) {
+
+           $table->increments('id');
+           $table->string('name');
+           $table->string('desc');
+           $table->float('cost');
+           $table->string('src');
+           $table->timestamps();
+        });
+
+
+
     }
 
     /**
@@ -23,6 +36,6 @@ class Good extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('stock');
     }
 }

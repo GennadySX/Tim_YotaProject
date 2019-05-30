@@ -14,7 +14,7 @@ class UserInfo extends Migration
     public function up()
     {
         Schema::create('user_info', function(Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->integer('user_id');
             $table->string('about_me');
             $table->dateTime('date_bith');

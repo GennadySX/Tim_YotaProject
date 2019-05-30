@@ -13,7 +13,19 @@ class Shops extends Migration
      */
     public function up()
     {
-        //
+
+
+        Schema::create('shops', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();
+            $table->integer('loc_region');
+            $table->integer('good_count');
+            $table->timestamps();
+        });
+
+
+
+
     }
 
     /**
@@ -23,6 +35,6 @@ class Shops extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('shops');
     }
 }

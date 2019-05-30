@@ -13,7 +13,19 @@ class Equipment extends Migration
      */
     public function up()
     {
-        //
+
+
+        Schema::create('equipment', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name')->unique();
+            $table->integer('region_id')->unsigned();
+            $table->integer('status');
+            $table->timestamps();
+        });
+
+
+
+
     }
 
     /**
@@ -23,6 +35,6 @@ class Equipment extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('equipment');
     }
 }
