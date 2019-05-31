@@ -1,5 +1,7 @@
-@extends('dashboard.index')
+@extends('dashboard.header')
+@include('dashboard.footer')
 @include('dashboard.body')
+
 @section('content') 
     @yield('header')
         @yield('body')
