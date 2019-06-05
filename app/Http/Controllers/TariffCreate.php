@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class Tariff extends Controller
+class TariffCreate extends Controller
 {
 
     public function del(Request $request)
     {
-        $data = DB::table('tariff')->where('name', $request->name);
+        $data = DB::table('tariff')->where('id', $request->id)->delete();
         if ($data) {
             return redirect('/dashboard/tariff');
         }
