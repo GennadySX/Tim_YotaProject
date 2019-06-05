@@ -76,9 +76,9 @@
             });
 
 
-            $('.icheckbox_flat-green input').click(function () {
+            $('.table-striped ins').click(function () {
 
-            alert($(this).parents('.even').find('.name'));
+            alert(12312);
             });
 
 

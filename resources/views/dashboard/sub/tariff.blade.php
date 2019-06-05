@@ -51,6 +51,7 @@
                                         <th class="column-title">Название </th>
                                         <th class="column-title">Стоимость</th>
                                         <th class="column-title">Описание </th>
+                                        <th class="column-title">Удаление </th>
                                         </th>
                                         <th class="bulk-actions" colspan="7">
                                             <a class="antoo" style="color:#fff; font-weight:500;">Отмечено ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
@@ -64,10 +65,16 @@
                                         <td class="a-center ">
                                             <input type="checkbox" class="flat" name="table_records">
                                         </td>
+
                                         <td class="name">{{$tarif->name}}</td>
                                         <td class="cost">{{$tarif->cost}} </td>
                                         <td class="desc">{{$tarif->desc}} <i class="success fa fa-long-arrow-up"></i></td>
-                                        </td>
+                                        <td class="del">
+                                            <form action="/dashboard/tariff/del" method="post">
+                                                @csrf
+                                            <input type="hidden" name="id" value="{{$tarif->id}}">
+                                            <button class="btn btn-danger" type="submit">удалить</button>
+                                        </form></td>
                                     </tr>
                                         @endforeach
                                     </tbody>
