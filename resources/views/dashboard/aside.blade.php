@@ -5,10 +5,10 @@
         <div class="menu_section">
             <h3>Меню</h3>
             <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Гланый <span class="fa fa-chevron-down"></span></a>
+                <li><a><i class="fa fa-home"></i> Главный <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="/dashboard">Мониторинг</a></li>
-                        <li><a href="/dashboard/profile">Ваш профил</a></li>
+                        <li><a href="/dashboard/profile">Ваш профиль</a></li>
                         @role('abonent')
                         <li><a href="/dashboard/tariff">Ваш тариф</a></li>
                         @endrole
@@ -41,7 +41,7 @@
                     <ul class="nav child_menu">
                         <li><a href="/dashboard/tariff">Тарифы</a></li>
                         @ability('admin,director,manager', 'create-post,edit-user')
-                        <li><a href="tables_dynamic.html">Управление тарифами</a></li>
+                        <li><a href="/dashboard/tariff/control">Управление тарифами</a></li>
                         @endability
                     </ul>
                 </li>

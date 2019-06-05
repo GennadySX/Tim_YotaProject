@@ -42,7 +42,11 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/tariff', function () {
         return view('dashboard.sub.tariff');
     });
-
+    Route::get('/tariff/control', function () {
+        return view('dashboard.sub.control_tariff');
+    });
+    Route::post('/tariff/control', 'Tariff@run');
+    Route::post('/tariff/del', 'Tariff@del');
 });
 
 

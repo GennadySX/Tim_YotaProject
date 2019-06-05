@@ -74,7 +74,22 @@
             $("#imageUpload").change(function() {
                 readURL(this);
             });
+
+
+            $('.icheckbox_flat-green input').click(function () {
+
+            alert($(this).parents('.even').find('.name'));
+            });
+
+
+
+
         });
+
+
+
+
+
 
     </script>
     </body>
