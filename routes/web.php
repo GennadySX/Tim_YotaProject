@@ -11,6 +11,12 @@
 |
 */
 
+function check() {
+    if (!Auth::check()){
+        return redirect('/');
+    }
+}
+
 Route::get('/', function () {
     return view('index');
 });
@@ -27,25 +33,30 @@ Auth::routes();
 
 
 Route::prefix('dashboard')->group(function () {
+
     Route::get('/', function () {
-        if(Auth::check())
+        check();
             return view('dashboard.cap');
-        else
-            return redirect('/');
+
     });
     Route::get('/logout.html', function () {
+        check();
         return view('dashboard.cap');
+
     });
     Route::get('/profile', function () {
+        check();
         return view('dashboard.sub.profile');
     });
     Route::get('/tariff', function () {
+        check();
         return view('dashboard.sub.tariff');
     });
     Route::get('/tariff/control', function () {
+        check();
         return view('dashboard.sub.control_tariff');
     });
-    Route::post('/tariff/control', 'TariffCreate@run');
+    Route::any('/tariff/control', 'TariffCreate@run');
     Route::post('/tariff/del', 'TariffCreate@del');
 });
 

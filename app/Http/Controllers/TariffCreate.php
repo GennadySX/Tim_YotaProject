@@ -4,13 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class TariffCreate extends Controller
 {
+    function check() {
+        if (!Auth::check()){
+            return redirect('/');
+        }
+    }
 
     public function del(Request $request)
     {
+        check();
+
         $data = DB::table('tariff')->where('id', $request->id)->delete();
         if ($data) {
             return redirect('/dashboard/tariff');
@@ -24,6 +32,9 @@ class TariffCreate extends Controller
 
     public function run(Request $request)
     {
+      if (Auth::user()) {
+
+
         $data = DB::table('tariff')->insert([
            'name' => $request->name,
            'cost' => $request->cost,
@@ -34,7 +45,9 @@ class TariffCreate extends Controller
      if ($data) {
            return redirect('/dashboard/tariff');
        }
-
+      } else {
+          return redirect('/');
+      }
     }
 
 

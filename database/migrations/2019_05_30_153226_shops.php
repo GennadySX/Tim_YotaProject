@@ -18,7 +18,7 @@ class Shops extends Migration
         Schema::create('shops', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->string('addresses');
+            $table->string('address');
             $table->integer('good_count');
             $table->timestamps();
         });

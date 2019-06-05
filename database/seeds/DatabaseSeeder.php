@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\User;
 use App\Role;
 use App\Permission;
+use Faker\Factory;
 
 
 class DatabaseSeeder extends Seeder
@@ -12,13 +13,13 @@ class DatabaseSeeder extends Seeder
      * Seed the application's database.
      *
      * @return void
-     */
-    protected function roles()
+  */
+    protected function users()
     {
         $owner = new Role();
         $owner->name         = 'root';
-        $owner->display_name = 'Гуру'; 
-        $owner->description  = 'Создатель'; 
+        $owner->display_name = 'Гуру';
+        $owner->description  = 'Создатель';
         $owner->save();
         //------------------------------------------
         $admin = new Role();
@@ -30,8 +31,8 @@ class DatabaseSeeder extends Seeder
 
         $admin = new Role();
         $admin->name         = 'admin';
-        $admin->display_name = 'Администратор'; 
-        $admin->description  = 'Управляющий'; 
+        $admin->display_name = 'Администратор';
+        $admin->description  = 'Управляющий';
         $admin->save();
         //------------------------------------------
         $admin = new Role();
@@ -42,7 +43,7 @@ class DatabaseSeeder extends Seeder
         //------------------------------------------
         $admin = new Role();
         $admin->name         = 'secretary';
-        $admin->display_name = 'Секретар'; 
+        $admin->display_name = 'Секретар';
         $admin->description  = 'Менедджер по управления материалов';
         $admin->save();
         //------------------------------------------
@@ -67,7 +68,7 @@ class DatabaseSeeder extends Seeder
         $admin = new Role();
         $admin->name         = 'seller';
         $admin->display_name = 'Продавец ';
-        $admin->description  = 'Обучает студентов'; 
+        $admin->description  = 'Обучает студентов';
         $admin->save();
         //------------------------------------------
         $admin = new Role();
@@ -77,10 +78,73 @@ class DatabaseSeeder extends Seeder
         $admin->save();
 
     }
-     public function run()
+
+    public function run()
     {
          
-        $this->roles();
+        $this->users();
+        $this->call(AddUser::class);
        $this->call(PermissionSeeder::class);
+        $this->call(Regions::class);
+        $this->call(Shops::class);
+        $this->call(Employees::class);
+        $this->call(Equipment::class);
+
+
+        $this->call(Stock::class);
+        $this->call(Tariffs::class);
+        $this->call(Department::class);
     }
+
+
+    public function user()
+    {
+        $fake = Factory::create();
+        DB::table('users')->insert([
+            'name' => 'root',
+            'surname' => $fake->lastName,
+            'middle_name' => $fake->name,
+            'phone' => $fake->phoneNumber,
+            'email' => 'root@mail.com',
+            'password' => bcrypt('unlockroot')
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'General',
+            'surname' => $fake->lastName,
+            'middle_name' => $fake->name,
+            'phone' => $fake->phoneNumber,
+            'email' => 'general@mail.com',
+            'password' => bcrypt('general')
+        ]);
+        DB::table('users')->insert([
+            'name' => 'admin',
+            'surname' => $fake->lastName,
+            'middle_name' => $fake->name,
+            'phone' => $fake->phoneNumber,
+            'email' => 'admin@mail.com',
+            'password' => bcrypt('unlockMe')
+        ]);
+
+        /*******************/
+
+        DB::table('role_user')->insert([
+            'user_id' => '1',
+            'role_id' => '1'
+        ]);
+        DB::table('role_user')->insert([
+            'user_id' => '2',
+            'role_id' => '2'
+        ]);
+        DB::table('role_user')->insert([
+            'user_id' => '3',
+            'role_id' => '3'
+        ]);
+
+
+
+
+
+    }
+
 }

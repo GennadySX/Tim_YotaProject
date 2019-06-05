@@ -20,7 +20,6 @@ class DummyDataUser extends Seeder
             DB::table('users')->insert([
             'name' => $faker->name,
             'email' => $faker->email,
-            'type'=>rand(0,3),
             'password' => $faker->password,
            	'created_at'=>$faker->dateTime(),
            	'updated_at'=>$faker->dateTime('now')

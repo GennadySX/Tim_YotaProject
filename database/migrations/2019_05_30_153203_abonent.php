@@ -15,13 +15,9 @@ class Abonent extends Migration
     {
 
         Schema::create('abonent', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->date('birth_date');
-            $table->string('number')->unique();
+
+            $table->integer('user_id')->unsigned();
             $table->integer('tariff_id')->unsigned();
-            $table->string('passport_number');
-            $table->date('date_buying');
         });
 
 

@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="x_content">
                                     <br />
-                                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="    ">
                                         <div class="form-group " >
 
                                             <div class="container xnb">
@@ -61,79 +61,13 @@
                                                         <label for="imageUpload"></label>
                                                     </div>
                                                     <div class="avatar-preview">
-                                                        <div id="imagePreview" style="background-image: url({{asset('tim/dash/images/user.png')}});">
+                                                        <div id="imagePreview" style="background-image: url({{asset('uploads/users/')}}/{{\Illuminate\Support\Facades\Auth::user()->avatar}});">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <style>
 
-                                                .xnb {
-                                                    max-width: 400px;
-                                                    margin: 0px auto;
-                                                }
-
-                                                .avatar-upload {
-                                                    position: relative;
-                                                    max-width: 205px;
-                                                    margin: 50px auto;
-                                                }
-                                                .avatar-upload .avatar-edit {
-                                                    position: absolute;
-                                                    right: 12px;
-                                                    z-index: 1;
-                                                    top: 10px;
-                                                }
-                                                .avatar-upload .avatar-edit input {
-                                                    display: none;
-                                                }
-                                                .avatar-upload .avatar-edit input + label {
-                                                    display: inline-block;
-                                                    width: 34px;
-                                                    height: 34px;
-                                                    margin-bottom: 0;
-                                                    border-radius: 100%;
-                                                    background: #FFFFFF;
-                                                    border: 1px solid transparent;
-                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-                                                    cursor: pointer;
-                                                    font-weight: normal;
-                                                    transition: all 0.2s ease-in-out;
-                                                }
-                                                .avatar-upload .avatar-edit input + label:hover {
-                                                    background: #f1f1f1;
-                                                    border-color: #d6d6d6;
-                                                }
-                                                .avatar-upload .avatar-edit input + label:after {
-                                                    content: "\f040";
-                                                    font-family: 'FontAwesome';
-                                                    color: #757575;
-                                                    position: absolute;
-                                                    top: 10px;
-                                                    left: 0;
-                                                    right: 0;
-                                                    text-align: center;
-                                                    margin: auto;
-                                                }
-                                                .avatar-upload .avatar-preview {
-                                                    width: 192px;
-                                                    height: 192px;
-                                                    position: relative;
-                                                    border-radius: 100%;
-                                                    border: 6px solid #F8F8F8;
-                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-                                                }
-                                                .avatar-upload .avatar-preview > div {
-                                                    width: 100%;
-                                                    height: 100%;
-                                                    border-radius: 100%;
-                                                    background-size: cover;
-                                                    background-repeat: no-repeat;
-                                                    background-position: center;
-                                                }
-
-                                            </style>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Имя <span class="required">*</span>
@@ -153,7 +87,7 @@
                                         <div class="form-group">
                                             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Отчество</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name" value="{{{Auth::user()->middle_name}}}">
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -168,7 +102,7 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Телефон<span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value="7 911 111-11-11">
+                                                <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->phone}}}">
                                                 <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                                             </div>
                                         </div>
@@ -189,7 +123,7 @@
 
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Дата рождения</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12" style="margin-top: 5px">
-                                                <input type="text" class="form-control has-feedback-left" id="single_cal3" placeholder="" aria-describedby="inputSuccess2Status3">
+                                                <input type="date" class="form-control has-feedback-left" id="single_cal3" placeholder="" aria-describedby="inputSuccess2Status3" value="{{Auth::user()->birth_date}}">
                                                 <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                 <span id="inputSuccess2Status3" class="sr-only">(успешно)</span>
                                             </div>
@@ -216,5 +150,73 @@
 
         </section>
     </section>
+
+    <style>
+
+        .xnb {
+            max-width: 400px;
+            margin: 0px auto;
+        }
+
+        .avatar-upload {
+            position: relative;
+            max-width: 205px;
+            margin: 50px auto;
+        }
+        .avatar-upload .avatar-edit {
+            position: absolute;
+            right: 12px;
+            z-index: 1;
+            top: 10px;
+        }
+        .avatar-upload .avatar-edit input {
+            display: none;
+        }
+        .avatar-upload .avatar-edit input + label {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            margin-bottom: 0;
+            border-radius: 100%;
+            background: #FFFFFF;
+            border: 1px solid transparent;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            font-weight: normal;
+            transition: all 0.2s ease-in-out;
+        }
+        .avatar-upload .avatar-edit input + label:hover {
+            background: #f1f1f1;
+            border-color: #d6d6d6;
+        }
+        .avatar-upload .avatar-edit input + label:after {
+            content: "\f040";
+            font-family: 'FontAwesome';
+            color: #757575;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+        }
+        .avatar-upload .avatar-preview {
+            width: 192px;
+            height: 192px;
+            position: relative;
+            border-radius: 100%;
+            border: 6px solid #F8F8F8;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        }
+        .avatar-upload .avatar-preview > div {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+    </style>
     @yield('footer')
 @endsection

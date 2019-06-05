@@ -1,5 +1,6 @@
 
 @section('header')
+
         <!DOCTYPE html>
 <html lang="{{ str_replace('_','-', app()->getLocale())}}">
 <head>
@@ -41,7 +42,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="{{asset('tim/images/person_1.png')}}" alt="..." class="img-circle profile_img">
+                        <img src="{{asset('uploads/users/')}}/{{\Illuminate\Support\Facades\Auth::user()->avatar}}" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         @if(Auth::check())
@@ -53,5 +54,6 @@
                 <!-- /menu profile quick info -->
 
                 <br />
+
 
 @endsection
