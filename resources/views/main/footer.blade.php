@@ -11,10 +11,10 @@
 
                         <!-- Logo -->
                         <div class="logo footer_logo">
-                            <a href="#">Ran<span>go</span></a>
+                            <a href="#">Yota</a>
                         </div>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae enim enim. Sed nec dignissim purus.</p>
+                        <p>Выберите и подключите тариф для смартфона. Бесплатная доставка SIM-карты. Пользуйся только тем, что нужно: подключай интернет и безлимитные приложения. Перейти со своим номером. Официальный сайт Yota. Международный роуминг. Широкая зона покрытия..</p>
 
                         <!-- Social -->
                         <div class="footer_social">
@@ -30,7 +30,7 @@
 
                         <!-- Copyright -->
                         <div class="footer_cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            МИСПИС &copy;<script>document.write(new Date().getFullYear());</script> Все авториские права пренадлежат КХТИ ИПМ <i class="fa fa-heart" aria-hidden="true"></i> от <a href="https://vk.com/timur__78" target="_blank">Абдрашитов Тимур</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 
                     </div>
@@ -41,20 +41,19 @@
                 <div class="col-lg-2">
 
                     <div class="footer_col">
-                        <div class="footer_col_title">Services</div>
+                        <div class="footer_col_title">Услуги</div>
                         <ul>
-                            <li><a href="#">Social media</a></li>
-                            <li><a href="#">Management</a></li>
-                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">Социальные услуги</a></li>
+                            <li><a href="#">Реклама</a></li>
+                            <li><a href="#">Франшейзинг</a></li>
                         </ul>
                     </div>
 
                     <div class="footer_col">
-                        <div class="footer_col_title">Aditionals</div>
+                        <div class="footer_col_title">Рекомендации</div>
                         <ul>
-                            <li><a href="#">Social media</a></li>
-                            <li><a href="#">Management</a></li>
-                            <li><a href="#">Branding</a></li>
+                            <li><a href="#">От Соц.сети</a></li>
+                            <li><a href="#">Отзывы</a></li>
                         </ul>
                     </div>
 
@@ -64,15 +63,14 @@
                 <div class="col-lg-2">
 
                     <div class="footer_col">
-                        <div class="footer_col_title">Menu</div>
+                        <div class="footer_col_title">Меню</div>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Testimonials</a></li>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Магазины</a></li>
+                            <li><a href="#">Блог</a></li>
+                            <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
 
@@ -82,12 +80,12 @@
                 <div class="col-lg-2">
 
                     <div class="footer_col">
-                        <div class="footer_col_title">About us</div>
+                        <div class="footer_col_title">О нас</div>
                         <ul>
-                            <li><a href="#">The team</a></li>
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Наша комманда</a></li>
+                            <li><a href="#">История</a></li>
+                            <li><a href="#">Компания</a></li>
+                            <li><a href="#">Тех.Поддержка</a></li>
                         </ul>
                     </div>
 
@@ -97,12 +95,12 @@
                 <div class="col-lg-2">
 
                     <div class="footer_col">
-                        <div class="footer_col_title">Community</div>
+                        <div class="footer_col_title">Общества</div>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Forums</a></li>
-                            <li><a href="#">Q&A</a></li>
-                            <li><a href="#">Purposes</a></li>
+                            <li><a href="#">наш блог</a></li>
+                            <li><a href="#">Форум</a></li>
+                            <li><a href="#">Мероприятия</a></li>
+                            <li><a href="#">Цели</a></li>
                         </ul>
                     </div>
 
@@ -113,7 +111,7 @@
             <div class="row">
                 <div class="col">
                     <!-- Copyright -->
-                    <div class="footer_cr_2">2017 All rights reserved</div>
+                    <div class="footer_cr_2">2019 Все права защищены.</div>
                 </div>
             </div>
         </div>

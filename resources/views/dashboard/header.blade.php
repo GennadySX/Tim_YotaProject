@@ -33,7 +33,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Yota</span></a>
+                    <a href="/" class="site_title"><img src="{{asset('tim/images/logo.png')}}" alt="" style="width: 45px; height: 45px; border-radius: 25px;"> <span>Yota</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -41,11 +41,13 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="{{asset('tim/dash/images/img.jpg')}}" alt="..." class="img-circle profile_img">
+                        <img src="{{asset('tim/images/person_1.png')}}" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
-                        <span>Welcome,</span>
-                        <h2>John Doe</h2>
+                        @if(Auth::check())
+                        <h2>{{{ Auth::user()->name}}} {{{ Auth::user()->surname}}}</h2>
+                        <span>{{{ Auth::user()->roles->first()->display_name}}}</span>
+                        @endif
                     </div>
                 </div>
                 <!-- /menu profile quick info -->

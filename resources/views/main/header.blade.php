@@ -36,171 +36,6 @@
 
 <body>
 
-<div class="modal fade " id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content " style=" width: 100%;
-    left: 27%;
-    transform: translateX(-50%);">
-
-            <div class="limiter ">
-                <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-                    <form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53">
-						Вход в систему
-					</span>
-
-                        <a href="#" class="btn-face m-b-20">
-                            <i class="fa fa-facebook-official"></i>
-                            Facebook
-                        </a>
-
-                        <a href="#" class="btn-google m-b-20">
-                            <img src="{{asset('tim/login/images/icons/icon-google.png')}}" alt="GOOGLE">
-                            Google
-                        </a>
-
-                        <div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Ваш Телефон
-						</span>
-                        </div>
-                        <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="text" name="phone" >
-                            <span class="focus-input100"></span>
-                        </div>
-                        <div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Ваш email
-						</span>
-
-
-                        </div>
-                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                            <input class="input100" type="password" name="email" >
-                            <span class="focus-input100"></span>
-                        </div>
-                        <div class="p-t-13 p-b-9">
-						<span class="txt1">
-							Ваш пароль
-						</span>
-
-                            <a href="#" class="txt2 bo1 m-l-5">
-                                забыли?
-                            </a>
-                        </div>
-                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                            <input class="input100" type="password" name="pass" >
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <div class="container-login100-form-btn m-t-17">
-                            <button class="login100-form-btn">
-                                Войти
-                            </button>
-                        </div>
-
-                        <div class="w-full text-center p-t-55">
-						<span class="txt2">
-							Нет аккаунта?
-						</span>
-
-                            <a href="#" class="txt2 bo1 signUpLink" data-toggle="modal" data-target="#signUp">
-                                Зарегистроваться
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div id="dropDownSelect1"></div>
-
-    </div>
-</div>
-</div>
-
-
-<div class="modal fade  " id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content " style=" width: 100%;
-    left: 27%;
-    transform: translateX(-50%);">
-
-            <div class="limiter ">
-                <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
-                    <form class="login100-form validate-form flex-sb flex-w">
-					<span class="login100-form-title p-b-53">
-						Регистрация
-					</span>
-
-                        <a href="#" class="btn-face m-b-20">
-                            <i class="fa fa-facebook-official"></i>
-                            Facebook
-                        </a>
-
-                        <a href="#" class="btn-google m-b-20">
-                            <img src="{{asset('tim/login/images/icons/icon-google.png')}}" alt="GOOGLE">
-                            Google
-                        </a>
-
-                        <div class="p-t-31 p-b-9">
-						<span class="txt1">
-							Ваша телефон
-						</span>
-                        </div>
-                        <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="text" name="name" >
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <div class="p-t-13 p-b-9">
-						<span class="txt1">
-                            Ваш email
-						</span>
-
-                        </div>
-                        <div class="wrap-input100 validate-input" data-validate = "Username is required">
-                            <input class="input100" type="text" name="email" >
-                            <span class="focus-input100"></span>
-                        </div>
-                        <div class="p-t-13 p-b-9">
-						<span class="txt1">
-                            Ваш пароль
-						</span>
-
-                            <a href="#" class="txt2 bo1 m-l-5">
-                                забыли?
-                            </a>
-                        </div>
-                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                            <input class="input100" type="password" name="pass" >
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <div class="container-login100-form-btn m-t-17">
-                            <button class="login100-form-btn">
-                                Зарегистроваться
-                            </button>
-                        </div>
-
-                        <div class="w-full text-center p-t-55">
-						<span class="txt2">
-							У вас уже есть аккаунт?
-						</span>
-
-                            <a href="#" class="txt2 bo1 signInLink" data-toggle="modal" data-target="#signIn">
-                                Вход в систему
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div id="dropDownSelect1"></div>
-
-    </div>
-</div>
-
-
 
 
 <div class="super_container">
@@ -219,7 +54,7 @@
 
         <!-- Logo -->
         <div class="logo mr-auto">
-            <a href="#">Ran<span>go</span></a>
+            <a href="#">Yota<span> in</span></a>
         </div>
 
         <!-- Navigation -->
@@ -240,13 +75,7 @@
                     @endif
                 @else
                     <li class="menu-has-children"><a href="/dashboard">{{ Auth::user()->name }}</a>
-                        <ul>
-                            <li><a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                            </li>
+
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
@@ -312,6 +141,185 @@
         </div>
 
     </header>
+
+
+
+
+
+    <div class="modal fade " id="signIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content " style=" width: 100%;
+    left: 27%;
+    transform: translateX(-50%);">
+
+                <div class="limiter ">
+                    <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+                        <form class=" flex-sb flex-w" method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <span class="login100-form-title p-b-53">
+						Вход в систему
+					</span>
+
+                            <a href="#" class="btn-face m-b-20">
+                                <i class="fa fa-facebook-official"></i>
+                                Facebook
+                            </a>
+
+                            <a href="#" class="btn-google m-b-20">
+                                <img src="{{asset('tim/login/images/icons/icon-google.png')}}" alt="GOOGLE">
+                                Google
+                            </a>
+
+
+                            <div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Ваш email
+						</span>
+
+
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                                <input class="input100" type="email" name="email" >
+                                <span class="focus-input100"></span>
+                            </div>
+                            <div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Ваш пароль
+						</span>
+
+                                <a href="#" class="txt2 bo1 m-l-5">
+                                    забыли?
+                                </a>
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                                <input class="input100" type="password" name="password" >
+                                <span class="focus-input100"></span>
+                            </div>
+
+                            <div class="container-login100-form-btn m-t-17">
+                                <button class="login100-form-btn" type="submit">
+                                    Войти
+                                </button>
+                            </div>
+
+                            <div class="w-full text-center p-t-55">
+						<span class="txt2">
+							Нет аккаунта?
+						</span>
+
+                                <a href="#" class="txt2 bo1 signUpLink" data-toggle="modal" data-target="#signUp">
+                                    Зарегистроваться
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="dropDownSelect1"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade  " id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content " style=" width: 100%;
+    left: 27%;
+    transform: translateX(-50%);">
+
+            <div class="limiter ">
+                <div class="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+                    <form class=" validate-form flex-sb flex-w" method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <span class="login100-form-title p-b-53">
+						Регистрация
+					    </span>
+                        <input class="input100" type="hidden" name="name" value="Abonent" >
+                        <input class="input100" type="hidden" name="surname" value="007" >
+                        @if ($errors->has('email'))
+                            <span class="invalid-feedback" role="alert">
+                           <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                        @endif
+                        <a href="#" class="btn-face m-b-20">
+                            <i class="fa fa-facebook-official"></i>
+                            Facebook
+                        </a>
+
+                        <a href="#" class="btn-google m-b-20">
+                            <img src="{{asset('tim/login/images/icons/icon-google.png')}}" alt="GOOGLE">
+                            Google
+                        </a>
+
+
+
+
+                        <div class="p-t-13 p-b-9">
+						<span class="txt1">
+                            Ваш email
+						</span>
+
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate = "Username is required">
+                            <input class="input100" type="text" name="email" >
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="p-t-13 p-b-9">
+						<span class="txt1">
+                            Придумайте пароль
+						</span>
+
+
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                            <input class="input100" type="password" name="password" >
+                            <span class="focus-input100"></span>
+                        </div>
+                        <div class="p-t-31 p-b-9">
+						<span class="txt1">
+							Повторите пароль
+						</span>
+                        </div>
+                        <div class="wrap-input100 validate-input" data-validate = "Username is required">
+                            <input class="input100" type="password" name="password_confirmation" >
+                            <span class="focus-input100"></span>
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('password') }}</strong>
+                                 </span>
+                           @endif
+                        </div>
+
+                        <div class="container-login100-form-btn m-t-17">
+                            <button class="login100-form-btn" type="submit">
+                                Зарегистроваться
+                            </button>
+                        </div>
+
+                        <div class="w-full text-center p-t-55">
+						<span class="txt2">
+							У вас уже есть аккаунт?
+						</span>
+
+                            <a href="#" class="txt2 bo1 signInLink" data-toggle="modal" data-target="#signIn">
+                                Вход в систему
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="dropDownSelect1"></div>
+
+    </div>
+</div>
+
+
+
+
+
+
 @endsection
 
 

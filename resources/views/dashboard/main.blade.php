@@ -4,9 +4,10 @@
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                <div class="count">2500</div>
+                <div class="count">{{\Illuminate\Support\Facades\DB::table('role_user')->where('role_id', '7')->count()}}</div>
                 <span class="count_bottom"><i class="green">4% </i> From last Week</span>
             </div>
+            @role('operator')
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
                 <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
                 <div class="count">123.50</div>
@@ -34,7 +35,7 @@
             </div>
         </div>
         <!-- /top tiles -->
-
+        @endrole
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="dashboard_graph">
@@ -604,8 +605,8 @@
                             <div class="x_content">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <div class="temperature"><b>Monday</b>, 07:30 AM
-                                            <span>F</span>
+                                        <div class="temperature"><b>Понадельник</b>, <span class="xtime"> </span> AM
+
                                             <span><b>C</b></span>
                                         </div>
                                     </div>
@@ -618,7 +619,7 @@
                                     </div>
                                     <div class="col-sm-8">
                                         <div class="weather-text">
-                                            <h2>Texas <br><i>Partly Cloudy Day</i></h2>
+                                            <h2>Kazan <br><i>Partly Cloudy Day</i></h2>
                                         </div>
                                     </div>
                                 </div>

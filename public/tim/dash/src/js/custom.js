@@ -215,7 +215,7 @@ function countChecked() {
     if (checkCount) {
         $('.column-title').hide();
         $('.bulk-actions').show();
-        $('.action-cnt').html(checkCount + ' Records Selected');
+        $('.action-cnt').html(checkCount + ' элементы');
     } else {
         $('.column-title').show();
         $('.bulk-actions').hide();

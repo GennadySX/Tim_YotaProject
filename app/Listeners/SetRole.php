@@ -32,7 +32,7 @@ class SetRole
         DB::table('role_user')->insert(
             array(
             'user_id'=>$user_id,
-            'role_id'=>7
+            'role_id'=>10
             )
         );
 }

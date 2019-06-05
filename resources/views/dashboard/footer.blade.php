@@ -1,3 +1,4 @@
+
 @section('footer')
     <!-- footer content -->
     <footer>
@@ -50,7 +51,32 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{asset('tim/dash/build/js/custom.min.js')}}"></script>
+    <script>
+        function update() {
+            $('.xtime').html(moment().format(' H:mm:ss'));
+        }
 
+        setInterval(update, 1000);
+    </script>
+    <script>
+        $(document).ready(function () {
+            function readURL(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                        $('#imagePreview').hide();
+                        $('#imagePreview').fadeIn(650);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $("#imageUpload").change(function() {
+                readURL(this);
+            });
+        });
+
+    </script>
     </body>
     </html>
 @endsection

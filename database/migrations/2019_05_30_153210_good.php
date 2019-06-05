@@ -19,7 +19,7 @@ class Good extends Migration
 
            $table->increments('id');
            $table->string('name');
-           $table->string('desc');
+           $table->longText('desc');
            $table->float('cost');
            $table->string('src');
            $table->timestamps();

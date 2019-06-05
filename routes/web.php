@@ -25,4 +25,25 @@ Auth::routes();
 //Route::get('log',)
 
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard.cap');
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', function () {
+        if(Auth::check())
+            return view('dashboard.cap');
+        else
+            return redirect('/');
+    });
+    Route::get('/logout.html', function () {
+        return view('dashboard.cap');
+    });
+    Route::get('/profile', function () {
+        return view('dashboard.sub.profile');
+    });
+    Route::get('/tariff', function () {
+        return view('dashboard.sub.tariff');
+    });
+
+});
+
+
+
