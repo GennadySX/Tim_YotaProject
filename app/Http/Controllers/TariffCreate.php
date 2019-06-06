@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MyTariff;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,19 @@ class TariffCreate extends Controller
 
     }
 
+    public function connect(Request $request)
+    {
+        check();
+
+        $user_tariff = MyTariff::where('user_id',Auth::user()->getAuthIdentifier())->update(['tariff_id' => intval($request->id)]);
+
+     if ($user_tariff) {
+         return redirect('/dashboard/my_tariff');
+     }
+
+
+
+    }
 
 
 

@@ -14,21 +14,18 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Тарифы</h3>
+                            <h3>Товары</h3>
                         </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Действующие тарифы <small> </small></h2>
+                            <h2>Наличие товары<small> </small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Settings 1</a>
-                                        </li>
-                                        <li><a href="#">Settings 2</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -52,12 +49,10 @@
                                         <th class="column-title">Стоимость</th>
                                         <th class="column-title">Описание </th>
 
-                                        @ability('admin,director,directorShop,manager,abonent', 'create-post,edit-user')
+                                        @ability('admin,director,directorShop,manager', 'create-post,edit-user')
                                         <th class="column-title">Контрол </th>
                                         @endability
-                                        @ability('admin,director,directorShop,manager', 'create-post,edit-user')
-                                        <th class="column-title">Удаление </th>
-                                        @endability
+
                                         <th class="bulk-actions" colspan="7">
                                             <a class="antoo" style="color:#fff; font-weight:500;">Отмечено ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
                                         </th>
@@ -65,28 +60,27 @@
                                     </thead>
 
                                     <tbody>
-                                    @foreach(\App\Tariff::all() as $tarif)
-                                    <tr class="even pointer">
-                                        <td class="a-center ">
-                                            <input type="checkbox" class="flat" name="table_records">
-                                        </td>
-
-                                        <td class="name">{{$tarif->name}}</td>
-                                        <td class="cost">{{$tarif->cost}} </td>
-                                        <td class="desc">{{$tarif->desc}} <i class="success fa fa-long-arrow-up"></i></td>
-                                        @ability('abonent', 'create-post,edit-user')
+                                    @foreach(\App\Stock::all() as $good)
+                                        <tr class="even pointer">
+                                            <td class="a-center ">
+                                                <input type="checkbox" class="flat" name="table_records">
+                                            </td>
+                                            <td class="name">{{$good->name}}</td>
+                                            <td class="cost">{{$good->cost}} <i class="danger fa fa-long-arrow-down"></i></td>
+                                        <td class="desc">{{$good->desc}} </td>
+                                        @ability('root', 'create-post,edit-user')
                                         <td class="del">
-                                            <form action="/dashboard/tariff/connect" method="post">
+                                            <form action="/dashboard/stock/connect" method="post">
                                                 @csrf
-                                                <input type="hidden" name="id" value="{{$tarif->id}}">
+                                                <input type="hidden" name="id" value="{{$good->id}}">
                                                 <button class="btn btn-success" type="submit">подключиться</button>
                                             </form></td>
                                         @endability
                                         @ability('admin,director,directorShop,manager', 'create-post,edit-user')
                                         <td class="del">
-                                            <form action="/dashboard/tariff/del" method="post">
+                                            <form action="/dashboard/stock/del" method="post">
                                                 @csrf
-                                            <input type="hidden" name="id" value="{{$tarif->id}}">
+                                            <input type="hidden" name="id" value="{{$good->id}}">
                                             <button class="btn btn-danger" type="submit">удалить</button>
                                         </form></td>
                                         @endability

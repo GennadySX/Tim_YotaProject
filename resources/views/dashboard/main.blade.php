@@ -3,9 +3,9 @@
         <!-- top tiles -->
         <div class="row tile_count">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                <div class="count">{{\Illuminate\Support\Facades\DB::table('role_user')->where('role_id', '7')->count()}}</div>
-                <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+                <span class="count_top"><i class="fa fa-user"></i> Общие абоненты</span>
+                <div class="count">{{\Illuminate\Support\Facades\DB::table('users')->count()}}</div>
+                <span class="count_bottom"><i class="green">4% </i> за последняя неделе</span>
             </div>
             @role('operator')
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">

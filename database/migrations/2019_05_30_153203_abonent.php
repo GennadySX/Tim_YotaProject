@@ -18,6 +18,7 @@ class Abonent extends Migration
 
             $table->integer('user_id')->unsigned();
             $table->integer('tariff_id')->unsigned();
+            $table->timestamps();
         });
 
 

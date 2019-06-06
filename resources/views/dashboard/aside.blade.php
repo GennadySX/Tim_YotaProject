@@ -10,7 +10,7 @@
                         <li><a href="/dashboard">Мониторинг</a></li>
                         <li><a href="/dashboard/profile">Ваш профиль</a></li>
                         @role('abonent')
-                        <li><a href="/dashboard/tariff">Ваш тариф</a></li>
+                        <li><a href="/dashboard/my_tariff">Ваш тариф</a></li>
                         @endrole
                     </ul>
                 </li>
@@ -26,14 +26,14 @@
                 @ability('admin,director', 'create-post,edit-user')
                 <li><a><i class="fa fa-desktop"></i> Сотрудники <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="general_elements.html">Управление сотрудников</a></li>
-                        <li><a href="general_elements.html">Админстратор</a></li>
-                        <li><a href="media_gallery.html">Менеджер</a></li>
-                        <li><a href="widgets.html">Сектеретар</a></li>
-                        <li><a href="typography.html">Директор магазина</a></li>
-                        <li><a href="icons.html">Оператор</a></li>
-                        <li><a href="invoice.html">Продавец</a></li>
-                        <li><a href="glyphicons.html">Мастер</a></li>
+                        <li><a href="/dashboard/employees/control">Управление сотрудников</a></li>
+                        <li><a href="/dashboard/employees/admin">Админстратор</a></li>
+                        <li><a href="/dashboard/employees/manager">Менеджер</a></li>
+                        <li><a href="/dashboard/employees/secretary">Сектеретар</a></li>
+                        <li><a href="/dashboard/employees/directorShop">Директор магазина</a></li>
+                        <li><a href="/dashboard/employees/operator">Оператор</a></li>
+                        <li><a href="/dashboard/employees/seller">Продавец</a></li>
+                        <li><a href="/dashboard/employees/master">Мастер</a></li>
                     </ul>
                 </li>
                 @endability
@@ -48,17 +48,17 @@
                 @ability('admin,director,directorShop,abonent,manager', 'create-post,edit-user')
                 <li><a><i class="fa  fa-shopping-bag"></i> Магазины <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="chartjs.html">Казань</a></li>
-                        <li><a href="chartjs2.html">Москва</a></li>
-                        <li><a href="morisjs.html">Санкт-Петерюбург</a></li>
+                        <li><a href="/dashboard/shops/kzn">Казань</a></li>
+                        <li><a href="/dashboard/shops/msk">Москва</a></li>
+                        <li><a href="/dashboard/shops/spb">Санкт-Петерюбург</a></li>
                     </ul>
                 </li>
                 @endability
                 <li><a><i class="fa fa-clone"></i>Склад <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="fixed_sidebar.html">Товары</a></li>
+                        <li><a href="/dashboard/stock">Товары</a></li>
                         @ability('admin,director,directorShop', 'create-post,edit-user')
-                        <li><a href="fixed_footer.html">Управление товаров</a></li>
+                        <li><a href="/dashboard/stock/control">Управление товаров</a></li>
                         @endability
                     </ul>
                 </li>

@@ -42,7 +42,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="{{asset('uploads/users/')}}/{{\Illuminate\Support\Facades\Auth::user()->avatar}}" alt="..." class="img-circle profile_img">
+                        <img src="{{asset('/uploads/users/'.Auth::user()->avatar)}}" alt="..." class="img-circle profile_img" >
                     </div>
                     <div class="profile_info">
                         @if(Auth::check())

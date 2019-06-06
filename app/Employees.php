@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Member extends Model
+class Employees extends Model
 {
-    protected $table = 'roles';
+    protected $table = 'role_user';
 }

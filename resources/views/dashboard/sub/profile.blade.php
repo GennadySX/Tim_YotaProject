@@ -50,14 +50,15 @@
                                 </div>
                                 <div class="x_content">
                                     <br />
-                                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="    ">
+                                    <form enctype="multipart/form-data" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="/dashboard/profile/update" method="post">
+                                        @csrf
                                         <div class="form-group " >
 
                                             <div class="container xnb">
 
                                                 <div class="avatar-upload">
                                                     <div class="avatar-edit">
-                                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="avatar"/>
                                                         <label for="imageUpload"></label>
                                                     </div>
                                                     <div class="avatar-preview">
@@ -73,28 +74,28 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Имя <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->name}}}">
+                                                <input type="text" id="first-name" required="required" name="name" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->name}}}">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Фамилия <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->surname}}}">
+                                                <input type="text" id="last-name" name="lastname" required="required" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->surname}}}">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Отчество</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name" value="{{{Auth::user()->middle_name}}}">
+                                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle_name" value="{{{Auth::user()->middle_name}}}">
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email <span class="required">*</span>
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->email}}}">
+                                                <input type="tel" id="telephone" name="email" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->email}}}">
                                                 <span class="fa fa-at form-control-feedback right" aria-hidden="true"></span>
                                             </div>
                                         </div>
@@ -102,20 +103,32 @@
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Телефон<span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value="{{{Auth::user()->phone}}}">
+                                                <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12" value=" {{{Auth::user()->phone}}}">
                                                 <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
                                             </div>
                                         </div>
                                         <div class="form-group">
+
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Пол</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
                                                 <div id="gender" class="btn-group" data-toggle="buttons">
-                                                    <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="gender" value="male"> &nbsp; Муж &nbsp;
+                                                    @if(\Illuminate\Support\Facades\Auth::user()->gender == 0)
+
+                                                    <label class="btn btn-primary active " data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                                        <input type="radio" name="gender" value="0"> &nbsp; Муж &nbsp;
                                                     </label>
                                                     <label class="btn btn-danger" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                                        <input type="radio" name="gender" value="female"> Жен
+                                                        <input type="radio" name="gender" value="1"> Жен
                                                     </label>
+                                                        @else
+                                                        <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                                            <input type="radio" name="gender" value="0"> &nbsp; Муж &nbsp;
+                                                        </label>
+                                                        <label class="btn btn-danger active" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                                            <input type="radio" name="gender" value="1"> Жен
+                                                        </label>
+
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -123,7 +136,7 @@
 
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Дата рождения</label>
                                             <div class="col-md-6 col-sm-6 col-xs-12" style="margin-top: 5px">
-                                                <input type="date" class="form-control has-feedback-left" id="single_cal3" placeholder="" aria-describedby="inputSuccess2Status3" value="{{Auth::user()->birth_date}}">
+                                                <input type="date" class="form-control has-feedback-left" id="single_cal3" placeholder="" name="birth" aria-describedby="inputSuccess2Status3" value="{{Auth::user()->birth_date}}">
                                                 <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                                                 <span id="inputSuccess2Status3" class="sr-only">(успешно)</span>
                                             </div>
