@@ -39,7 +39,7 @@
                                     <form class="form-horizontal form-label-left input_mask" method="post" action="/dashboard/employees/control">
                                         @csrf
                                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <input type="email" class="form-control" id="inputSuccess3" placeholder="email пользователя" name="id">
+                                            <input type="email" class="form-control" id="inputSuccess3" placeholder="email пользователя" name="email">
                                             <span class="fa fa-at form-control-feedback right" aria-hidden="true"></span>
                                         </div>
 
@@ -49,17 +49,17 @@
                                         </div>
 
 
-                                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">Должности</label>
+                                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">Место работы</label>
                                         <div class="col-md-4 col-sm-4 col-xs-4 form-group has-feedback">
-                                            <select class="form-control">
+                                            <select class="form-control" name="region">
                                                 @foreach(\App\Regions::all() as $role)
                                                     <option value="{{$role->id}}">{{$role->name}}</option>
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <label for="middle-name" class="control-label col-md-2 col-sm-2 col-xs-12">Место работы</label>
+                                        <label for="middle-name" class="control-label col-md-2 col-sm-2 col-xs-12">Должности</label>
                                         <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
-                                            <select class="form-control">
+                                            <select class="form-control" name="role">
                                                 @foreach(\App\Member::all() as $region)
                                                     @if(intval($region->id) != 1 && intval($region->id) != 2 )
                                                     <option value="{{$region->id}}">{{$region->display_name}}</option>

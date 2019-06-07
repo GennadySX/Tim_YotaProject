@@ -125,7 +125,8 @@ Route::prefix('/dashboard')->group(function () {
     Route::post('/shops/del', 'ShopControle@del');
     Route::post('/stock/del', 'StockControle@del');
     Route::post('/stock/control', 'StockControle@run');
-    Route::post('/employees/del', 'StockControle@del');
+    Route::post('/employees/del', 'EmployeesController@del');
+    Route::post('/employees/control', 'EmployeesController@run');
 });
 
 
